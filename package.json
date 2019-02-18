@@ -1,0 +1,22 @@
+{
+  "name": "silberschmiede",
+  "version": "1.0.0",
+  "description": "Website for the jeweler silberschmiede thun",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wurscht/silberschmiede.git"
+  },
+  "author": "Jonas Lehmann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wurscht/silberschmiede/issues"
+  },
+  "homepage": "https://github.com/wurscht/silberschmiede#readme",
+  "dependencies": {
+    "uikit": "^3.0.3"
+  }
+}
