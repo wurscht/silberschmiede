@@ -1,4 +1,4 @@
-{% load static %}
+{% load staticfiles %}
 
 <!DOCTYPE html>
 <html lang="de">
@@ -6,12 +6,41 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, intial-scale=1.0" />
     <meta name="author" content="Silberschmiede Thun GmbH" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <link rel="stylesheet" href="{% static 'css/uikit.min.css' %}" />
     <script src="{% static 'js/uikit.min.js' %}"></script>
     <script src="{% static 'js/uikit-icons.min.js' %}"></script>
     <title>Silberschmiede Thun</title>
   </head>
   <body>
-    <!-- <div class="" -->
+    <!-- Navbar -->
+    <nav id="navbar" class="uk-navbar-container uk-margin" uk-navbar>
+      <div class="uk-navbar-left">
+        <a class="uk-navbar-item uk-logo" href="#">Logo</a>
+      </div>
+      <div class="uk-navbar-center">
+        <li class="uk-margin-left uk-list uk-link-reset uk-text-contrast">
+          <a href="#">Home</a>
+        </li>
+        <li class="uk-margin-left uk-list uk-link-reset uk-text-contrast">
+          <a href="#">Aktuell</a>
+        </li>
+        <li class="uk-margin-left uk-list uk-link-reset uk-text-contrast">
+          <a href="#">Kreationen</a>
+        </li>
+        <li class="uk-margin-left uk-list uk-link-reset uk-text-contrast">
+          <a href="#">Geschäft & Atelier</>
+        </li>
+        <li class="uk-margin-left uk-list uk-link-reset uk-text-contrast">
+          <a href="#">Team</a>
+        </li>
+        <li class="uk-margin-left uk-list uk-link-reset uk-text-contrast">
+          <a href="#">Reisetagebuch</a>
+        </li>
+        <li class="uk-margin-left uk-list uk-link-reset uk-text-contrast">
+          <a href="#">Kontakt</a>
+        </li>
+      </div>
+    </nav>
   </body>
 </html>

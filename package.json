@@ -18,5 +18,8 @@
   "homepage": "https://github.com/wurscht/silberschmiede#readme",
   "dependencies": {
     "uikit": "^3.0.3"
+  },
+  "devDependencies": {
+    "tailwindcss": "^0.7.4"
   }
 }
