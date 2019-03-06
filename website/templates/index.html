@@ -7,40 +7,52 @@
     <meta name="viewport" content="width=device-width, intial-scale=1.0" />
     <meta name="author" content="Silberschmiede Thun GmbH" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/uikit.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/uikit.css' %}" />
     <script src="{% static 'js/uikit.min.js' %}"></script>
     <script src="{% static 'js/uikit-icons.min.js' %}"></script>
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
     <title>Silberschmiede Thun</title>
   </head>
   <body>
-    <!-- Navbar -->
-    <nav id="navbar" class="uk-navbar-container uk-margin" uk-navbar>
-      <div class="uk-navbar-left">
-        <a class="uk-navbar-item uk-logo" href="#">Logo</a>
+    <div class="uk-container uk-container-small">
+      <!-- Navbar -->
+      <nav id="navbar" class="uk-navbar-container" uk-navbar>
+        <div class="uk-navbar-left">
+          <img class="uk-navbar-item uk-logo" src="{% static 'images/amboss_scaled_white.png' %}">
+        </div>
+        <div class="uk-navbar-center">
+          <li class="uk-margin-left uk-list uk-link-reset uk-text-muted">
+            <a href="#">Home</a>
+          </li>
+          <li class="uk-margin-left uk-list uk-link-reset uk-text-muted">
+            <a href="#">Aktuell</a>
+          </li>
+          <li class="uk-margin-left uk-list uk-link-reset uk-text-muted">
+            <a href="#">Kreationen</a>
+          </li>
+          <li class="uk-margin-left uk-list uk-link-reset uk-text-muted">
+            <li class="uk-list uk-link-reset uk-text-muted"><a href="#">Geschäft</a></li>
+            <div uk-dropdown>
+              <ul class="uk-nav uk-dropdown-nav">
+                <li class="uk-list uk-link-reset"><a href="#">Atelier</a></li>
+                <li class="uk-list uk-link-reset"><a href="#">Team</a></li>
+                <li class="uk-list uk-link-reset"><a href="#">Kollektionen & Events</a></li>
+                <li class="uk-list uk-link-reset"><a href="#">Ökogold</a></li>
+                <li class="uk-list uk-link-reset"><a href="#">Reisetagebuch</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="uk-margin-left uk-list uk-link-reset uk-text-muted">
+            <a href="#">Kontakt</a>
+          </li>
+        </div>
+      </nav>
+      <div class="uk-inline">
+        <img src="{% static 'images/laden_cropped.png' %}" alt="">
+        <div class="uk-overlay uk-overlay-primary uk-position-top">
+          <p class="uk-text-large">Silberschmiede-Thun GmbH<span class="uk-text-small"> - Yvonne Schediwy und Sara Lehmann</span></p>
+        </div>
       </div>
-      <div class="uk-navbar-center">
-        <li class="uk-margin-left uk-list uk-link-reset uk-text-contrast">
-          <a href="#">Home</a>
-        </li>
-        <li class="uk-margin-left uk-list uk-link-reset uk-text-contrast">
-          <a href="#">Aktuell</a>
-        </li>
-        <li class="uk-margin-left uk-list uk-link-reset uk-text-contrast">
-          <a href="#">Kreationen</a>
-        </li>
-        <li class="uk-margin-left uk-list uk-link-reset uk-text-contrast">
-          <a href="#">Geschäft & Atelier</>
-        </li>
-        <li class="uk-margin-left uk-list uk-link-reset uk-text-contrast">
-          <a href="#">Team</a>
-        </li>
-        <li class="uk-margin-left uk-list uk-link-reset uk-text-contrast">
-          <a href="#">Reisetagebuch</a>
-        </li>
-        <li class="uk-margin-left uk-list uk-link-reset uk-text-contrast">
-          <a href="#">Kontakt</a>
-        </li>
-      </div>
-    </nav>
   </body>
 </html>
