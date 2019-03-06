@@ -4,6 +4,6 @@ from django.conf import settings
 from django.contrib import admin
 
 urlpatterns = [
-    url(r"^home/", include("website.urls")),
+    url(r"^", include("website.urls")),
     url(r"^admin/", admin.site.urls),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
