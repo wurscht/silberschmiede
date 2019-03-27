@@ -1,0 +1,27 @@
+version: "2"
+services:
+  postgres:
+    image: postgres:9.6
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=silberschmiede
+      - POSTGRES_USER=silberschmiede
+      - POSTGRES_PASSWORD=silberschmiede
+  phppgadmin:
+    image: zhajor/docker-phppgadmin
+    depends_on:
+      - postgres
+    links:
+      - postgres
+    ports:
+        - "8080:80"
+    environment:
+      - DB_HOST=postgres
+      - DB_PORT=5432
+
+  mailcatcher:
+    image: schickling/mailcatcher
+    ports:
+      - "1080:1080"
+      - "1025:1025"

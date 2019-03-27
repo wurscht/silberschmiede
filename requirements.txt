@@ -1,1 +1,10 @@
 Django>=1.11,<1.12
+django-cms==3.6.0
+django-ckeditor==5.6.1
+
+Pillow>=2
+django-filer==0.9.9
+cmsplugin-filer==0.10.1
+django-reversion==1.8.5
+
+psycopg2-binary==2.7.7

@@ -1,0 +1,10 @@
+html,
+body {
+  background-color: #33101a;
+  margin: 0;
+  height: 100%;
+}
+
+div li a {
+  color: #ffffff;
+}

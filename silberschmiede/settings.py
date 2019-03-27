@@ -29,13 +29,22 @@ ALLOWED_HOSTS = []
 
 # Application definition
 INSTALLED_APPS = [
+    "website.apps.WebsiteConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django.contrib.sites",
+    "cms",
+    "treebeard",
+    "menus",
+    "sekizai",
+    "djangocms_admin_style",
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -75,8 +84,12 @@ WSGI_APPLICATION = "silberschmiede.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": "silberschmiede",
+        "USER": "silberschmiede",
+        "PASSWORD": "silberschmiede",
+        "HOST": "localhost",
+        "PORT": "5432",
     }
 }
 
@@ -116,3 +129,9 @@ STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "website/static/")]
+
+CMS_TEMPLATES = (
+    ("template_1.html", "Template One"),
+    ("template_2.html", "Template Two"),
+)
+
