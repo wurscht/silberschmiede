@@ -48,12 +48,17 @@ SITE_ID = 1
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "django.middleware.locale.LocaleMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "cms.middleware.user.CurrentUserMiddleware",
+    "cms.middleware.page.CurrentPageMiddleware",
+    "cms.middleware.toolbar.ToolbarMiddleware",
+    "cms.middleware.language.LanguageCookieMiddleware",
 ]
 
 ROOT_URLCONF = "silberschmiede.urls"
@@ -70,6 +75,8 @@ TEMPLATES = [
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
                 "django.template.context_processors.static",
+                "sekizai.context_processors.sekizai",
+                "cms.context_processors.cms_settings",
             ]
         },
     }
@@ -110,7 +117,26 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "de"
+
+CMS_LANGUAGE_CONF = {"de": ["de"]}
+
+CMS_SITE_LANGUAGES = {1: ["de", "de"]}
+
+gettext = lambda s: s
+
+CMS_LANGUAGES = {
+    1: [
+        {
+            "code": "de",
+            "name": gettext("German"),
+            "fallbacks": [],
+            "public": True,
+            "hide_untranslated": True,
+            "redirect_on_fallback": False,
+        }
+    ]
+}
 
 TIME_ZONE = "UTC"
 

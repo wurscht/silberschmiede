@@ -8,3 +8,13 @@ body {
 div li a {
   color: #ffffff;
 }
+
+.sidebar {
+  margin-top: 50px;
+  position: absolute;
+  right: 0px;
+  height: 100px;
+  width: 30%;
+  color: #ffffff;
+  font-size: 15px;
+}
