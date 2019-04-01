@@ -4,14 +4,20 @@
 <html lang="de">
   {% include 'head.html' %}
   <body>
+    {% include 'navbar.html' %}
     <div class="uk-container uk-container-small">
-      {% include 'navbar.html' %}
       <div class="uk-inline">
-        <img src="{% static 'images/laden_cropped.png' %}" alt="">
-        <div class="uk-overlay uk-overlay-primary uk-position-top">
-          <p class="uk-text-large">Silberschmiede-Thun GmbH<span class="uk-text-small"> - Yvonne Schediwy und Sara Lehmann</span></p>
+        <img src="{% static 'images/laden_cropped.png' %}" alt="" />
+        <div class="uk-overlay-primary uk-position-top">
+          <p class="uk-text-large" style="margin: 10px 0 20px 20px">
+            Silberschmiede-Thun GmbH<span class="uk-text-small">
+              - Yvonne Schediwy und Sara Lehmann</span
+            >
+          </p>
         </div>
         {% include 'sidebar.html' %}
       </div>
+    </div>
   </body>
+  {% include 'footer.html' %}
 </html>

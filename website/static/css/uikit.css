@@ -2263,7 +2263,7 @@ select.uk-form-width-xsmall {
   max-width: 750px;
 }
 .uk-container-small {
-  max-width: 900px;
+  max-width: 1200px;
 }
 .uk-container-large {
   max-width: 1600px;
@@ -3869,7 +3869,7 @@ ul.uk-nav-sub {
 /* Container
  ========================================================================== */
 .uk-navbar-container:not(.uk-navbar-transparent) {
-  background-color: #33101a;
+  background-color: #210F10;
 }
 /*
  * Remove pseudo elements created by micro clearfix as precaution (if Container component is used)
