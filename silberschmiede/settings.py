@@ -29,19 +29,12 @@ ALLOWED_HOSTS = []
 
 # Application definition
 INSTALLED_APPS = [
-    "website.apps.WebsiteConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "django.contrib.sites",
-    "cms",
-    "treebeard",
-    "menus",
-    "sekizai",
-    "djangocms_admin_style",
 ]
 
 SITE_ID = 1
@@ -55,10 +48,6 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "cms.middleware.user.CurrentUserMiddleware",
-    "cms.middleware.page.CurrentPageMiddleware",
-    "cms.middleware.toolbar.ToolbarMiddleware",
-    "cms.middleware.language.LanguageCookieMiddleware",
 ]
 
 ROOT_URLCONF = "silberschmiede.urls"
@@ -76,7 +65,6 @@ TEMPLATES = [
                 "django.contrib.messages.context_processors.messages",
                 "django.template.context_processors.static",
                 "sekizai.context_processors.sekizai",
-                "cms.context_processors.cms_settings",
             ]
         },
     }
@@ -119,25 +107,6 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "de"
 
-CMS_LANGUAGE_CONF = {"de": ["de"]}
-
-CMS_SITE_LANGUAGES = {1: ["de", "de"]}
-
-gettext = lambda s: s
-
-CMS_LANGUAGES = {
-    1: [
-        {
-            "code": "de",
-            "name": gettext("German"),
-            "fallbacks": [],
-            "public": True,
-            "hide_untranslated": True,
-            "redirect_on_fallback": False,
-        }
-    ]
-}
-
 TIME_ZONE = "UTC"
 
 USE_I18N = True
@@ -155,9 +124,4 @@ STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "website/static/")]
-
-CMS_TEMPLATES = (
-    ("template_1.html", "Template One"),
-    ("template_2.html", "Template Two"),
-)
 
