@@ -32,8 +32,13 @@ div li a {
   bottom: 0px;
 }
 
-.footer p {
+.footer a {
   color: white;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: inherit;
 }
 
 .navbar {

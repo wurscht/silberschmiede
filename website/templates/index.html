@@ -15,6 +15,11 @@
             >
           </p>
         </div>
+        {% block content %}
+          {% placeholder "feature" %}
+          {% placeholder "content" %}
+          {% placeholder "splashbox" %}
+        {% endblock content %}
         {% include 'sidebar.html' %}
       </div>
     </div>
